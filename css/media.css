@@ -1,0 +1,27 @@
+@media (prefers-color-scheme: dark) {
+    :root{
+        --body:#151437;
+        --txt:#fff;
+        --dots:#ebebeb;
+        --title-tab:#151437;
+        --foter-link:#fff;
+    }
+    
+    .logo::before{
+        content: url(../img/svg/logo-dark.svg);
+    }
+}
+
+@media (max-width: 1440px){
+    .about::after{
+        display: none;
+    }
+}
+
+@media (max-width: 684px) {
+    .about__work{
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
