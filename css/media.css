@@ -25,3 +25,14 @@
         transform: translateX(-50%);
     }
 }
+
+@media (max-width: 576px) {
+    .header__nav::before,
+    .header__nav::after,
+    .header__content::after,
+    .header__content::before,
+    .capabilities .container::before,
+    .capabilities .container::after{
+        display: none;
+    }
+}
