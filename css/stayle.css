@@ -361,7 +361,7 @@ p {
     border: .3vw solid #9297EF;
     border-radius: 50%;
     z-index: -1;
-     animation: rotate 5s linear infinite alternate; 
+    animation: rotate 5s linear infinite alternate;
 }
 
 
@@ -445,35 +445,74 @@ p {
 /* capabilities END */
 
 /* work start */
-.works{
+.works {
     padding-bottom: 220px;
+    position: relative;
 }
-.works__title{
+
+.works::before {
+    content: url(../img/svg/figure_2.svg);
+    position: absolute;
+    top: -35%;
+    left: 0;
+    z-index: -1;
+}
+
+.works .container {
+    position: relative;
+}
+
+.works .container::before {
+    content: '';
+    position: absolute;
+    width: 7vw;
+    height: 7.5vw;
+    left: 20%;
+    top: 75%;
+    border: .3vw solid #7177F1;
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotate 5s linear infinite alternate;
+}
+
+.works .container::after {
+    content: '';
+    position: absolute;
+    width: 5vw;
+    height: 5vw;
+    right: 0;
+    top: 95%;
+    border: .3vw solid #7177F1;
+    z-index: -1;
+    animation: rotate 5s linear infinite alternate;
+}
+
+.works__title {
     margin-bottom: 30px;
 }
 
-.work__tab-list{
+.work__tab-list {
     border-radius: 8px;
 }
 
-.work__tab-link{
+.work__tab-link {
     background: var(--body);
     box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
     color: var(--title);
     font-size: 18px;
     font-weight: 600;
     text-transform: uppercase;
-    padding: 20px;
-  transition: .4s;
-  border: none;
+    padding: 16.5px;
+    transition: .4s;
+    border: none;
 }
 
-.work__tab-link.active{
+.work__tab-link.active {
     background: var(--btn);
     color: var(--body);
 }
 
-.list-group-item+.list-group-item.active{
+.list-group-item+.list-group-item.active {
     margin: 0;
     border: none;
 }
@@ -484,27 +523,28 @@ p {
     overflow: hidden;
 }
 
-.works__tab-img{
+.works__tab-img {
     width: 100%;
     max-height: 320px;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    object-position: top;
 }
 
-.works__tab-desc{
+.works__tab-desc {
     box-shadow: 0px 0px 5px 3px rgba(113, 119, 241, 0.15);
     border-radius: 8px;
     background: var(--body);
     padding: 20px;
 }
 
-.works__tab-title{
+.works__tab-title {
     font-size: 24px;
-    
+
 }
 
-.works__tab-text{
+.works__tab-text {
     font-size: 18px;
     line-height: 150%;
     color: var(--txt);
@@ -512,11 +552,32 @@ p {
 }
 
 
-.works__tab-btn{
+.works__tab-btn {
     font-size: 18px;
     font-weight: 600;
     text-transform: capitalize;
     width: 190px;
+
+}
+
+/* work end */
+
+/* footer start */
+.footer{
+    padding-bottom: 130px;
+}
+
+.footer__link, .footer__contact{
+    font-size: 24px;
+    color: var(--footer-link);
     
 }
-/* work end */
+
+.footer__link:hover, .footer__contact:hover{
+    color: var(--footer-link);
+    text-decoration: underline;
+}
+
+
+
+/* footer end */
